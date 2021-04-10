@@ -6,7 +6,7 @@ project-repository-1899 created by GitHub Classroom
   - Race met targets -> race met targets naast de track die neergeschoten moeten worden om te winnen/points krijgen per neergeschoten target
   - Controller -> rc car kunnen bedienen aan de hand van een ps4 controller
 # Technologie
-  - Arduiono met infrarood sensoren voor start en finish en eventueel voor checkpoints
+  - Arduino met infrarood sensoren voor start en finish en eventueel voor checkpoints
 # Extra's
   - snelheidsmeter
   - afstandsmeter
