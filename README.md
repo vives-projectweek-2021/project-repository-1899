@@ -1,15 +1,20 @@
-# project-repository-1899
-project-repository-1899 created by GitHub Classroom
+### RC car battle tanks
 
-# hoofddoel
-  - Battle tank -> een wapen op de tank die projectielen met velcro afschiet naar een andere tank met een roos.
-  - Race met targets -> race met targets naast de track die neergeschoten moeten worden om te winnen/points krijgen per neergeschoten target
-  - Controller -> rc car kunnen bedienen aan de hand van een ps4 controller
-# Technologie
-  - Arduino met infrarood sensoren voor start en finish en eventueel voor checkpoints
+# Who
+  - Simon Mestdagh
+  - Jens Cocquyt
+  - Lukas Hoste
+# Why
+  - Shooting targets adds a challenge to the race
+# Main goal
+  - Battle tank -> A weapon is attached to the tank that can shoot projectiles with velcro to a target on a different tank
+  - Race with targets -> A race with targets along the track to shoot down. You either get points per target shot down or need to shoot down all targets to win.
+  - Controller -> Abbility to control the car with a controller
+# Technology
+  - Arduino with infrared sensors to detect the car at checkpoints, start and finish
 # Extra's
-  - snelheidsmeter
-  - afstandsmeter
+  - speedometer
+  - distance meter
 # Wie
-  - Jens: wapen en roos op rc car
-  - Lukas en Simon: Checkpoints, controller, track
+  - Jens Cocquyt: weapon and target on car
+  - Lukas Hoste and Simon Mestdagh: Checkpoints, controller, track
