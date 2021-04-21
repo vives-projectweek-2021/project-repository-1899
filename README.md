@@ -4,6 +4,7 @@
   - Simon Mestdagh
   - Jens Cocquyt
   - Lukas Hoste
+  - Nick Geysen
 # Why
   - Shooting targets adds a challenge to the race
 # Main goal
