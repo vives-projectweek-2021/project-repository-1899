@@ -17,7 +17,6 @@
   - speedometer
   - distance meter
 # Wie
-  - Jens Cocquyt: weapon and target on car
+  - Jens Cocquyt and Nick  Geysen: weapon and target on car
   - Lukas Hoste and Simon Mestdagh: Checkpoints, controller, track
   
-# Test
