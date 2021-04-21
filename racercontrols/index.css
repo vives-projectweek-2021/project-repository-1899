@@ -1,0 +1,43 @@
+
+
+
+/* Controls */
+
+#controls {
+	margin: 2vh 0;
+	display: inline-grid;
+	
+	grid-template-columns: 8vh 8vh 8vh;
+	grid-template-rows: 8vh 8vh 8vh;
+	grid-gap: 0;
+}	
+#controls #button-forward {
+	grid-column: 2;
+	grid-row: 1;
+}
+#controls #button-left {
+	grid-column: 1;
+	grid-row: 2;
+}
+#controls #button-right {
+	grid-column: 3;
+	grid-row: 2;
+}
+#controls #button-reverse {
+	grid-column: 2;
+	grid-row: 3;
+}
+
+#controls button {
+	padding: 1vh 2vh;
+	font-size: 2vh;
+}
+
+#controls button:active,
+.forward #controls button#button-forward,
+.reverse #controls button#button-reverse,
+.left #controls button#button-left,
+.right #controls button#button-right {
+	background: #888;
+	color: #444;
+}
