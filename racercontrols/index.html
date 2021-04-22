@@ -13,32 +13,40 @@
 	
 	<body class='control'>
 		<div class='content'>
-			
-		</div>
-
-		<div class='connect'>
-
-			<button id='connect'>Connect</button>
-		</div>
-
-		<div class='settings'>
-			<div class='pills'>
-				<button id='control'>Control</button>
-				<button id='customize'>Customize</button>
+			<div class="half1">
+				
+					<div class='connect'>
+						<button id='connect'>Connect</button>
+					</div>
+	
+					<div class='pills'>
+						<button id='control'>Control</button>
+						<button id='customize'>Customize</button>
+					</div>
+				
+				<div class="scoreboard">
+					<div id="score">
+						score: 0
+					</div>
+					<button id="testbutton">test</button>
+				</div>
+			</div>
+			<div class="half2">
+				<div class='views'>
+					<div id='controlView'>
+						<div id='controls'>
+							<button class="button" id='button-forward' data-down='forward' data-up='stop'>▲&#xFE0E;</button>
+							<button class="button" id='button-left' data-down='left' data-up='stop'>◀&#xFE0E;</button>
+							<button class="button" id='button-right' data-down='right' data-up='stop'>▶&#xFE0E;</button>
+							<button class="button" id='button-reverse' data-down='reverse' data-up='stop'>▼&#xFE0E;</button>
+						</div>
+					</div>
+				</div>	
 			</div>
 		
-			<div class='views'>
-				<div id='controlView'>
-					<div id='controls'>
-						<button id='button-forward' data-down='forward' data-up='stop'>▲&#xFE0E;</button>
-						<button id='button-left' data-down='left' data-up='stop'>◀&#xFE0E;</button>
-						<button id='button-right' data-down='right' data-up='stop'>▶&#xFE0E;</button>
-						<button id='button-reverse' data-down='reverse' data-up='stop'>▼&#xFE0E;</button>
-					</div>
-				</div>
+			
 				
-				
-		
+		</div>
 		<script type="text/javascript" src="lib/promise-queue.js"></script>
 		<script type="text/javascript" src="lib/bluetooth.js"></script>
 		<script type="text/javascript" src="lib/sbrick.js"></script>

@@ -1,3 +1,11 @@
+/* Scoreboard test */
+var testbutton = document.getElementById("testbutton"), count = 0;
+testbutton.onclick = function() {
+	count +=1;
+	score.innerHTML = "Score: " + count;
+}
+
+
 /* Pills */
 
 document.getElementById('control').addEventListener('click', (e) => {
