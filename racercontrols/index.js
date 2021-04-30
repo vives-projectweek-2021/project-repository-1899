@@ -1,3 +1,11 @@
+/* Scoreboard test */
+var testbutton = document.getElementById("testbutton"), count = 0;
+testbutton.onclick = function() {
+	count +=1;
+	score.innerHTML = "Score: " + count;
+}
+
+
 /* Pills */
 
 document.getElementById('control').addEventListener('click', (e) => {
@@ -57,14 +65,14 @@ var activeButtons = {
 
 const gamepad = new Gamepad();
 
-gamepad.on('press', 'd_pad_up', () => { activeButtons.ArrowUp = true; evaluateCommands(); } );
-gamepad.on('release', 'd_pad_up', () => { activeButtons.ArrowUp = false; evaluateCommands(); } );
-gamepad.on('press', 'd_pad_left', () => { activeButtons.ArrowLeft = true; evaluateCommands(); } );
+gamepad.on('press', 'shoulder_bottom_right', () => { activeButtons.ArrowUp = true; evaluateCommands(); } );
+gamepad.on('release', 'shoulder_bottom_right', () => { activeButtons.ArrowUp = false; evaluateCommands(); } );
+gamepad.on('press', 'stick_axis_left', () => { activeButtons.ArrowLeft = true; evaluateCommands(); } );
 gamepad.on('release', 'd_pad_left', () => { activeButtons.ArrowLeft = false; evaluateCommands(); } );
 gamepad.on('press', 'd_pad_right', () => { activeButtons.ArrowRight = true; evaluateCommands(); } );
 gamepad.on('release', 'd_pad_right', () => { activeButtons.ArrowRight = false; evaluateCommands(); } );
-gamepad.on('press', 'd_pad_down', () => { activeButtons.ArrowDown = true; evaluateCommands(); } );
-gamepad.on('release', 'd_pad_down', () => { activeButtons.ArrowDown = false; evaluateCommands(); } );
+gamepad.on('press', 'shoulder_bottom_left', () => { activeButtons.ArrowDown = true; evaluateCommands(); } );
+gamepad.on('release', 'shoulder_bottom_left', () => { activeButtons.ArrowDown = false; evaluateCommands(); } );
 
 gamepad.on('press', 'button_1', () => executeCommand('lights') );
 
