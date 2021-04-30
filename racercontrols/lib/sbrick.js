@@ -67,7 +67,7 @@
 
 	// Values limits
 	const MIN    = 0;   // No Speed
-	const MAX    = 255; // Max Speed
+	const MAX    = 20; // Max Speed
 	const MAX_QD = 127; // Max Speed for QuickDrive
 	const MAX_VOLT = 9; // Max Voltage = Full battery
 

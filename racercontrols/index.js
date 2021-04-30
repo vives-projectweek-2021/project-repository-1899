@@ -1,7 +1,29 @@
+
+
+
 /* Scoreboard test */
+
+const Http = new XMLHttpRequest();
+const url = 'http://127.0.0.1:8080/api';
+Http.open("GET", url);
+Http.send();
+
+Http.onreadystatechange=(e)=> {
+
+	if(Http.responseText!= ""){
+		count = Http.responseText
+		console.log(Http.responseText)
+		score.innerHTML = "Score: " + count;
+
+	}
+	
+
+}
+
 var testbutton = document.getElementById("testbutton"), count = 0;
 testbutton.onclick = function() {
-	count +=1;
+	count += 1;
+	count = Http.responseText
 	score.innerHTML = "Score: " + count;
 }
 
@@ -31,6 +53,9 @@ var activeKeys = {
 }
 
 function handleKeyEvent(event) {
+	Http.open("GET", url);
+	Http.send();
+	
     if (event.target.tagName == 'STYLE') return;
     if (event.type != 'keydown' && event.type != 'keyup') return;
 
