@@ -1,7 +1,16 @@
 
 
 
-/* Scoreboard test */
+/* Scoreboard*/
+var intervalID = window.setInterval(checkScore, 1000);
+
+function checkScore() {
+  // go check API 
+ 	Http.open("GET", url);
+	Http.send();
+	console.log("works")
+
+}
 
 const Http = new XMLHttpRequest();
 const url = 'http://127.0.0.1:8080/api';
@@ -53,8 +62,6 @@ var activeKeys = {
 }
 
 function handleKeyEvent(event) {
-	Http.open("GET", url);
-	Http.send();
 	
     if (event.target.tagName == 'STYLE') return;
     if (event.type != 'keydown' && event.type != 'keyup') return;
