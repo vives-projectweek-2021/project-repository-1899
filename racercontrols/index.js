@@ -29,12 +29,11 @@ Http.onreadystatechange=(e)=> {
 
 }
 
-var testbutton = document.getElementById("testbutton"), count = 0;
-testbutton.onclick = function() {
-	count += 1;
-	count = Http.responseText
-	score.innerHTML = "Score: " + count;
-}
+// var testbutton = document.getElementById("testbutton"), count = 0;
+// testbutton.onclick = function() {
+// 	 executeCommand('shoot');
+
+// }
 
 
 /* Pills */
@@ -105,6 +104,10 @@ gamepad.on('press', 'd_pad_right', () => { activeButtons.ArrowRight = true; eval
 gamepad.on('release', 'd_pad_right', () => { activeButtons.ArrowRight = false; evaluateCommands(); } );
 gamepad.on('press', 'shoulder_bottom_left', () => { activeButtons.ArrowDown = true; evaluateCommands(); } );
 gamepad.on('release', 'shoulder_bottom_left', () => { activeButtons.ArrowDown = false; evaluateCommands(); } );
+gamepad.on('press', 'd_pad_up', () => { activeButtons.ArrowUp = true; evaluateCommands(); } );
+gamepad.on('release', 'd_pad_up', () => { activeButtons.ArrowUp = false; evaluateCommands(); } );
+gamepad.on('press', 'd_pad_down', () => { activeButtons.ArrowDown = true; evaluateCommands(); } );
+gamepad.on('release', 'd_pad_down', () => { activeButtons.ArrowDown = false; evaluateCommands(); } );
 
 gamepad.on('press', 'button_1', () => executeCommand('lights') );
 
@@ -187,6 +190,15 @@ function executeCommand(value) {
 	}
 	
     switch (value) {
+			case 'shoot':
+				updateCommand('shoot');
+				
+		if (SBrick.isConnected()) {		            	
+						SBrick.quickDrive([
+				{ channel: SBrick.CHANNEL2, direction: SBrick.CW, power: SBrick.MAX }
+			]);
+		}
+			break;
         case 'forward':
         	updateCommand('forward');
         	
@@ -242,6 +254,7 @@ function executeCommand(value) {
 			if (SBrick.isConnected()) {		            	
             	SBrick.stop(SBrick.CHANNEL1);
             	SBrick.stop(SBrick.CHANNEL3);
+							SBrick.stop(SBrick.CHANNEL2);
             }
             
 			break;
