@@ -99,7 +99,7 @@ const gamepad = new Gamepad();
 
 gamepad.on('press', 'shoulder_bottom_right', () => { activeButtons.ArrowUp = true; evaluateCommands(); } );
 gamepad.on('release', 'shoulder_bottom_right', () => { activeButtons.ArrowUp = false; evaluateCommands(); } );
-gamepad.on('press', 'stick_axis_left', () => { activeButtons.ArrowLeft = true; evaluateCommands(); } );
+gamepad.on('press', 'd_pad_left', () => { activeButtons.ArrowLeft = true; evaluateCommands(); } );
 gamepad.on('release', 'd_pad_left', () => { activeButtons.ArrowLeft = false; evaluateCommands(); } );
 gamepad.on('press', 'd_pad_right', () => { activeButtons.ArrowRight = true; evaluateCommands(); } );
 gamepad.on('release', 'd_pad_right', () => { activeButtons.ArrowRight = false; evaluateCommands(); } );
