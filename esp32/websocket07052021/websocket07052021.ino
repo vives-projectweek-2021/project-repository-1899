@@ -43,7 +43,7 @@ void loop() {
       Serial.println(httpResponseCode);
    
       http.end(); //Free the resources
-      delay(1);
+      delay(1000);
     }
   }
 }

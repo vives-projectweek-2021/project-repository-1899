@@ -11,7 +11,6 @@ void setup() {
   pinMode(photoTran,INPUT);
    
   Serial.begin(9600);
-  Serial.println("Tis briel");
   delay(4000);
   WiFi.begin(ssid, password);
  
@@ -44,7 +43,7 @@ void loop() {
       Serial.println(httpResponseCode);
    
       http.end(); //Free the resources
-      delay(1);
+      delay(1000);
     }
   }
 }
