@@ -1,8 +1,8 @@
 #include <WiFi.h>
 #include <HTTPClient.h>
  
-const char* ssid = "LAB_02.65";
-const char* password =  "CONNECT2LAB";
+const char* ssid = "WiFi-2.4-4050";
+const char* password =  "WhNY3jFtp555";
 int photoTran = 15;
 int deRoos = 0;
  
@@ -32,7 +32,7 @@ void loop() {
        
       HTTPClient http;
    
-      http.begin("http://172.20.101.114:8080/api"); //Specify the URL
+      http.begin("http://192.168.1.17:8080/api"); //Specify the URL
           // Specify content-type header
       http.addHeader("Content-Type", "application/json");
       
@@ -43,10 +43,7 @@ void loop() {
       Serial.println(httpResponseCode);
    
       http.end(); //Free the resources
-      delay(1);
+      delay(1000);
     }
   }
- 
-  Serial.println("ja");
- 
 }

@@ -143,6 +143,10 @@ body {
 	padding: 1vh 2vh;
 	font-size: 2vh;
 }
+#controls #button-shoot {
+	grid-column: 2;
+	grid-row: 2;
+}
 
 #controls button:active,
 .forward #controls button#button-forward,
