@@ -189,7 +189,6 @@ function executeCommand(value) {
     switch (value) {
         case 'forward':
         	updateCommand('forward');
-        	
 			if (SBrick.isConnected()) {		            	
             	SBrick.quickDrive([
 					{ channel: SBrick.CHANNEL1, direction: SBrick.CW, power: SBrick.MAX },

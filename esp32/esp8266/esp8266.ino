@@ -1,16 +1,17 @@
-#include <WiFi.h>
-#include <HTTPClient.h>
- 
-const char* ssid = "LAB_02.65";
-const char* password =  "CONNECT2LAB";
-int photoTran = 15;
+#include <ESP8266WiFi.h>
+#include <ESP8266HTTPClient.h>
+
+const char* ssid = "WiFi-2.4-4050";
+const char* password =  "WhNY3jFtp555";
+int photoTran = 12;
 int deRoos = 0;
  
 void setup() {
 
   pinMode(photoTran,INPUT);
    
-  Serial.begin(115200);
+  Serial.begin(9600);
+  Serial.println("Tis briel");
   delay(4000);
   WiFi.begin(ssid, password);
  
@@ -32,7 +33,7 @@ void loop() {
        
       HTTPClient http;
    
-      http.begin("http://172.20.101.114:8080/api"); //Specify the URL
+      http.begin("http://192.168.1.17:8080/api"); //Specify the URL
           // Specify content-type header
       http.addHeader("Content-Type", "application/json");
       
@@ -46,7 +47,4 @@ void loop() {
       delay(1);
     }
   }
- 
-  Serial.println("ja");
- 
 }
