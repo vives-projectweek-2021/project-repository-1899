@@ -171,7 +171,7 @@ function evaluateCommands() {
     if (lastCommand != command) {
         executeCommand(command);
         lastCommand = command;
-    }
+    }	
 }
 
 function updateCommand(value) {
