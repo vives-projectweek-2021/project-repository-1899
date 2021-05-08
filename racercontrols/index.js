@@ -9,8 +9,9 @@ function checkScore() {
  	Http.open("GET", url);
 	Http.send();
 	console.log("works")
-
 }
+
+
 
 const Http = new XMLHttpRequest();
 const url = 'http://127.0.0.1:8080/api';
@@ -49,7 +50,7 @@ var lightsState = false;
 /* Keyboard events */
 
 document.addEventListener('keydown', handleKeyEvent);
-document.addEventListener('keyup', handleKeyEvent);			
+document.addEventListener('keyup', handleKeyEvent);
 
 var lastKey = null;
 
@@ -57,7 +58,8 @@ var activeKeys = {
     'ArrowUp':    false,
     'ArrowDown':  false,
     'ArrowLeft':  false,
-    'ArrowRight': false
+    'ArrowRight': false,
+		'k': false
 }
 
 function handleKeyEvent(event) {
@@ -91,11 +93,14 @@ var activeButtons = {
     'ArrowUp':    false,
     'ArrowDown':  false,
     'ArrowLeft':  false,
-    'ArrowRight': false
+    'ArrowRight': false,
+		'k': false
 }
 
 const gamepad = new Gamepad();
 
+gamepad.on('press', 'shoulder_top_right', () => { activeButtons.k = true; evaluateCommands(); } );
+gamepad.on('release', 'shoulder_top_right', () => { activeButtons.k = false; evaluateCommands(); } );
 gamepad.on('press', 'shoulder_bottom_right', () => { activeButtons.ArrowUp = true; evaluateCommands(); } );
 gamepad.on('release', 'shoulder_bottom_right', () => { activeButtons.ArrowUp = false; evaluateCommands(); } );
 gamepad.on('press', 'd_pad_left', () => { activeButtons.ArrowLeft = true; evaluateCommands(); } );
@@ -155,6 +160,8 @@ var lastCommand = 'stop';
 
 function evaluateCommands() {
 	command = 'stop';
+
+	if (activeKeys.k || activeButtons.k) command = 'shoot';
 	if (activeKeys.ArrowUp || activeButtons.ArrowUp) command = 'forward';
 	if (activeKeys.ArrowDown || activeButtons.ArrowDown) command = 'reverse';
 	if (activeKeys.ArrowLeft || activeButtons.ArrowLeft) command = 'left';
@@ -168,6 +175,7 @@ function evaluateCommands() {
 }
 
 function updateCommand(value) {
+	document.body.classList.remove('shoot');
 	document.body.classList.remove('forward');
 	document.body.classList.remove('reverse');
 	document.body.classList.remove('left');

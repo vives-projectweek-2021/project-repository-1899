@@ -136,6 +136,7 @@ body {
 #controls #button-shoot {
 	grid-column: 2;
 	grid-row: 2;
+	padding: 0px;
 }
 
 #controls button {
@@ -147,7 +148,8 @@ body {
 .forward #controls button#button-forward,
 .reverse #controls button#button-reverse,
 .left #controls button#button-left,
-.right #controls button#button-right {
+.right #controls button#button-right,
+.shoot #controls button#button-shoot {
 	background: #888;
 	color: #444;
 }
