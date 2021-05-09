@@ -21,7 +21,7 @@ let value: number = 0.0;
   })
 
   app.post('/api', async (request: Request, response: Response) => {
-      value = request.body.value
+      value += request.body.value
     response.json({ result: 'OK '})
     
   })
