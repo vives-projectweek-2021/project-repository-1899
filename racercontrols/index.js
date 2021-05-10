@@ -26,9 +26,15 @@ Http.onreadystatechange=(e)=> {
 		score.innerHTML = "Score: " + count;
 
 	}
-	
-
 }
+
+
+	var testbutton = document.getElementById("resetscore");
+	testbutton.onclick = function() {
+		count = 0;
+		score.innerHTML = "Score: " + count;
+	}
+
 
 // var testbutton = document.getElementById("testbutton"), count = 0;
 // testbutton.onclick = function() {
