@@ -29,11 +29,17 @@ Http.onreadystatechange=(e)=> {
 }
 
 
-	var testbutton = document.getElementById("resetscore");
-	testbutton.onclick = function() {
-		count = 0;
-		score.innerHTML = "Score: " + count;
-	}
+	document.getElementById("resetscore").addEventListener('click', () => {
+		const Http = new XMLHttpRequest();
+		const url='http://127.0.0.1:8080/api';
+		Http.open("DELETE", url);
+		Http.send();
+		console.log("test")
+
+		Http.onreadystatechange = (e) => {
+		console.log(Http.responseText)
+	}})
+
 
 
 // var testbutton = document.getElementById("testbutton"), count = 0;

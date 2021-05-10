@@ -10,6 +10,7 @@ app.use(express.json());
 
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, DELETE, OPTIONS, HEAD')
   next();
 });
 
@@ -22,8 +23,14 @@ let value: number = 0.0;
 
   app.post('/api', async (request: Request, response: Response) => {
       value += request.body.value
+       console.log(request.body)
     response.json({ result: 'OK '})
     
+  })
+
+  app.delete('/api', async (request: Request, response: Response) => {
+    value = 0
+    response.json({ result: 'OK '})
   })
 
   
