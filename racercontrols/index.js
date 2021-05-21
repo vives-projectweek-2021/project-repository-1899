@@ -71,20 +71,13 @@ var activeKeys = {
     'ArrowDown':  false,
     'ArrowLeft':  false,
     'ArrowRight': false,
-		'k': false
+	'k': false
 }
 
 function handleKeyEvent(event) {
 	
     if (event.target.tagName == 'STYLE') return;
     if (event.type != 'keydown' && event.type != 'keyup') return;
-
-	if (event.key == 'l' && event.type == 'keydown') {
-		executeCommand('lights');
-		event.preventDefault();
-
-		return;
-	}
 
 	if (activeKeys.hasOwnProperty(event.key)) {
 		activeKeys[event.key] = event.type == 'keydown';
@@ -106,7 +99,7 @@ var activeButtons = {
     'ArrowDown':  false,
     'ArrowLeft':  false,
     'ArrowRight': false,
-		'k': false
+	'k': false
 }
 
 const gamepad = new Gamepad();
